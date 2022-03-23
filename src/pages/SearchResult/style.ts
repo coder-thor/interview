@@ -3,8 +3,19 @@ import styled from "styled-components";
 export default styled.div`
     display: flex;
     flex-direction: column;
-    padding: 40px 240px;
+    padding: 40px 22vw;
+    width: 100%;
     box-sizing: border-box;
+    @media (max-width: 500px) {
+        & {
+            padding: 40px 20vw;
+        }
+    }
+    @media (max-width: 450px) {
+        & {
+            padding: 40px 15vw;
+        }
+    }
     .title {
         margin-bottom: 15px;
     }
@@ -38,6 +49,11 @@ export const ProductTrendChartItemStyle = styled.div`
     position: relative;
     background: #fff;
     cursor: pointer;
+    @media (max-width: 400px) {
+        & {
+            width: 32vw;
+        }
+    }
     &.show-chart {
         border: 1px solid #ddd;
         background: #fff;

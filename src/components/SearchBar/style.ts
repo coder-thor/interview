@@ -5,11 +5,12 @@ import { mainColor } from "../../constants/color";
 
 export default styled.div`
     width: 100%;
-    height: 46px;
+    height: 5vh;
+    min-height: 46px;
     border-bottom: 1px solid #ddd;
     overflow: hidden;
     display: flex;
-    padding: 0 180px 0 30px;
+    padding: 0 16% 0 5%;
     box-sizing: border-box;
     align-items: center;
     .title {
@@ -21,7 +22,6 @@ export default styled.div`
     }
     .search-input {
         height: 25px;
-        min-width: 90%;
         .MuiOutlinedInput-root  {
             height: 100%;
             input {
