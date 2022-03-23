@@ -95,14 +95,13 @@ export default function ProductTrendChartItem(props: PropsWithChildren<IProducts
     const analysisProductNameResult = useMemo<{ type: string; text: string }[]>(() => {
         const result = []
         if (props.name.includes(props.keywords)) {
-
             const startIndex = props.name.indexOf(props.keywords);
             const endIndex = props.keywords.length + startIndex;
             for (let i = 0, len = props.name.length; i < len; i++) {
                 // 只需要将中间高亮的一部分打上特殊的加粗标记
                 if (i < startIndex || i > endIndex) {
                     result.push({
-                        type: "normal",
+                        type: "normal", 
                         text: props.name[i]
                     })
                 } else {
@@ -112,6 +111,11 @@ export default function ProductTrendChartItem(props: PropsWithChildren<IProducts
                     })
                 }
             }
+        } else {
+            result.push({
+                type: "normal",
+                text: props.name
+            })
         }
         return result
     }, [props.name, props.keywords])
@@ -128,6 +132,7 @@ export default function ProductTrendChartItem(props: PropsWithChildren<IProducts
             setIsReady(true);
         })
         myChart.setOption(chartOption);
+        return myChart.dispose; // 注销图表
     }, [chartOption])
 
     return (
