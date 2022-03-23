@@ -1,0 +1,1 @@
+export const mainColor: string = "rgba(0, 0, 0, 0.23)"; // 主色调

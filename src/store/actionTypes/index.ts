@@ -1,0 +1,1 @@
+export { UPDATE_PRODUCTS_TRENDS, UPDATE_PRODUCTS_TRENDS_LOADING } from "./productsActionTypes";
